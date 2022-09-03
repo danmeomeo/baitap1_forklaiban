@@ -1,13 +1,13 @@
 <?php
 require_once ('dbhelp.php');
 
-$s_fullname = $s_code = $s_class = $s_gmail = $s_birthday = $s_sdt = '';
+$s_HoTen = $s_code = $s_class = $s_gmail = $s_birthday = $s_sdt = '';
 
 if (!empty($_POST)) {
 	$s_id = '';
 
-	if (isset($_POST['fullname'])) {
-		$s_fullname = $_POST['fullname'];
+	if (isset($_POST['hoten'])) {
+		$s_fullname = $_POST['hoten'];
 	}
 
 	if (isset($_POST['code'])) {
@@ -34,7 +34,7 @@ if (!empty($_POST)) {
 		$s_id = $_POST['id'];
 	}
 
-	$s_fullname = str_replace('\'', '\\\'', $s_fullname);
+	$s_hoten = str_replace('\'', '\\\'', $s_hoten);
 	$s_code = str_replace('\'', '\\\'', $s_code);
 	$s_class = str_replace('\'', '\\\'', $s_class);
 	$s_gmail = str_replace('\'', '\\\'', $s_gmail);
